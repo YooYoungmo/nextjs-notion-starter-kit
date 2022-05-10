@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-notion-starter-kit",
+  "name": "insight-bettercode-kr",
   "version": "2.0.0",
   "private": true,
   "description": "The perfect starter kit for building beautiful websites with Next.js and Notion.",
@@ -51,7 +51,8 @@
     "react-notion-x": "^6.12.7",
     "react-tweet-embed": "^2.0.0",
     "react-use": "^17.3.2",
-    "rss": "^1.2.2"
+    "rss": "^1.2.2",
+    "sharp": "^0.30.4"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^12.1.0",

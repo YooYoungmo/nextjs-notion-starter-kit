@@ -3,33 +3,32 @@ import Link from 'next/link'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import cs from 'classnames'
-import { useRouter } from 'next/router'
-import { useSearchParam } from 'react-use'
+import {useRouter} from 'next/router'
+import {useSearchParam} from 'react-use'
 import BodyClassName from 'react-body-classname'
-import { PageBlock } from 'notion-types'
+import {PageBlock} from 'notion-types'
 
 import TweetEmbed from 'react-tweet-embed'
 
 // core notion renderer
-import { NotionRenderer } from 'react-notion-x'
+import {NotionRenderer} from 'react-notion-x'
 
 // utils
-import { getBlockTitle, getPageProperty, formatDate } from 'notion-utils'
-import { mapPageUrl, getCanonicalPageUrl } from 'lib/map-page-url'
-import { mapImageUrl } from 'lib/map-image-url'
-import { searchNotion } from 'lib/search-notion'
-import { useDarkMode } from 'lib/use-dark-mode'
+import {formatDate, getBlockTitle, getPageProperty} from 'notion-utils'
+import {getCanonicalPageUrl, mapPageUrl} from 'lib/map-page-url'
+import {mapImageUrl} from 'lib/map-image-url'
+import {searchNotion} from 'lib/search-notion'
+import {useDarkMode} from 'lib/use-dark-mode'
 import * as types from 'lib/types'
 import * as config from 'lib/config'
 
 // components
-import { Loading } from './Loading'
-import { Page404 } from './Page404'
-import { PageHead } from './PageHead'
-import { PageAside } from './PageAside'
-import { Footer } from './Footer'
-import { NotionPageHeader } from './NotionPageHeader'
-import { GitHubShareButton } from './GitHubShareButton'
+import {Loading} from './Loading'
+import {Page404} from './Page404'
+import {PageHead} from './PageHead'
+import {PageAside} from './PageAside'
+import {Footer} from './Footer'
+import {NotionPageHeader} from './NotionPageHeader'
 
 import styles from './styles.module.css'
 
@@ -286,7 +285,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         footer={footer}
       />
 
-      <GitHubShareButton />
+      {/*<GitHubShareButton />*/}
     </>
   )
 }
