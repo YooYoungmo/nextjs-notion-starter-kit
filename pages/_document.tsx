@@ -1,14 +1,14 @@
 import * as React from 'react'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { IconContext } from '@react-icons/all-files'
+import Document, {Head, Html, Main, NextScript} from 'next/document'
+import {IconContext} from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
+      <IconContext.Provider value={{style: {verticalAlign: 'middle'}}}>
         <Html lang='en'>
           <Head>
-            <link rel='shortcut icon' href='/favicon.ico' />
+            <link rel='shortcut icon' href='/favicon.ico'/>
             <link
               rel='icon'
               type='image/png'
@@ -16,13 +16,29 @@ export default class MyDocument extends Document {
               href='favicon.png'
             />
 
-            <link rel='manifest' href='/manifest.json' />
-          </Head>
-
-          <body>
+            <link rel='manifest' href='/manifest.json'/>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=UA-154897382-5`}
+            />
             <script
               dangerouslySetInnerHTML={{
                 __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-154897382-5', {
+              page_path: window.location.pathname,
+            });
+          `,
+              }}
+            />
+          </Head>
+
+          <body>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
 /** Inlined version of noflash.js from use-dark-mode */
 ;(function () {
   var storageKey = 'darkMode'
@@ -58,11 +74,11 @@ export default class MyDocument extends Document {
   }
 })();
 `
-              }}
-            />
-            <Main />
+            }}
+          />
+          <Main/>
 
-            <NextScript />
+          <NextScript/>
           </body>
         </Html>
       </IconContext.Provider>
