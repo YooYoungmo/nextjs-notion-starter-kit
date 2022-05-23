@@ -1,10 +1,12 @@
 import * as React from 'react'
 import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
+import { FaFacebookSquare } from '@react-icons/all-files/fa/FaFacebookSquare'
 import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
 import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
+
 
 import { useDarkMode } from 'lib/use-dark-mode'
 import * as config from 'lib/config'
@@ -93,6 +95,18 @@ export const FooterImpl: React.FC = () => {
             rel='noopener noreferrer'
           >
             <FaLinkedin />
+          </a>
+        )}
+
+        {config.facebook && (
+          <a
+            className={styles.linkedin}
+            href={`https://www.facebook.com/${config.facebook}`}
+            title={`Facebook ${config.author}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaFacebookSquare />
           </a>
         )}
       </div>

@@ -20,6 +20,7 @@ export default siteConfig({
   // twitter: 'transitive_bs',
   github: 'bettercode-oss',
   linkedin: 'company/13272959',
+  facebook: '베터코드-주식회사-1666140583448053',
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
